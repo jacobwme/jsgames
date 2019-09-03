@@ -143,7 +143,7 @@
        }
     }
 
-    function touchMoveHandler(e) {
+    function touchHandler(e) {
         if (e.touches) {
             var relativeX = e.touches[0].pageX - canvas.offsetLeft;
             var relativeY = e.touches[0].pageY - canvas.offsetTop;
@@ -231,6 +231,8 @@
     document.addEventListener("keydown", keyDownHandler, false);
     document.addEventListener("keyup", keyUpHandler, false);
     document.addEventListener("mousemove", mouseMoveHandler, false);
+    document.addEventListener("touchstart", touchHandler);
+    document.addEventListener("touchmove",touchHandler);
     console.log("Hello!")
 
     draw();
